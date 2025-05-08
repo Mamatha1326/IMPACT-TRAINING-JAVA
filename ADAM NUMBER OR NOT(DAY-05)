@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int square=num*num;
+        int temp=num;
+       
+        int rev=0;
+    
+        while(temp>0){
+            rev=rev*10+temp%10;
+            temp/=10;
+        }
+        int revsquare=rev*rev;
+        int revsquareRev=0;
+        while(revsquare>0){
+            revsquareRev=revsquareRev*10+revsquare%10;
+            revsquare=revsquare/10;
+        }
+        if(square==revsquareRev){
+            System.out.println(num +"Adam");
+        }
+        else{
+            System.out.println(num +"not Adam");
+        }
+        sc.close();
+    }
+    
+}
