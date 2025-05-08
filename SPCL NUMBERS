@@ -1,0 +1,29 @@
+ 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int num1=sc.nextInt();
+        int num2=sc.nextInt(); 
+       
+        int a=0;
+        int b=0;
+        int sum=0;
+        int product=0;
+        int average=0;
+        for(int i=num1;i<=num2;i++){
+             a=i%10;
+             b=i/10;
+             sum=a+b;
+             product=a*b;
+             average=sum+product;
+            
+             if(average==i){
+                 System.out.println(i);
+             }
+        }
+            
+    }
+}
