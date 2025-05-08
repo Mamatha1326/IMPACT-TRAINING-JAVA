@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+
+        
+        int square = num * num;
+
+        int temp = square;
+        int digits = 0;
+
+        
+        while (temp > 0) {
+            digits++;
+            temp /= 10;
+        }
+
+        
+        int power = 1;
+        for (int i = 1; i < digits; i++) {
+            power *= 10;
+
+            int left = square / power;
+            int right = square % power;
+
+            if (right > 0 && (left + right == num)) {
+                System.out.println(num + " is a Kaprekar number.");
+                return;
+            }
+        }
+
+        
+        if (num == 1) {
+            System.out.println("1 is a Kaprekar number.");
+        } else {
+            System.out.println(num + " is NOT a Kaprekar number.");
+        }
+    }
+}
+DAY-04
