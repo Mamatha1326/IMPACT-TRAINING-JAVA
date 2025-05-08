@@ -1,0 +1,24 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int rows=sc.nextInt();
+        int columns=sc.nextInt();
+        int number=sc.nextInt();
+        if(number<=columns){
+            System.out.println("Mangoes");
+        }
+        else if(number %columns==0){
+            System.out.println("Mangos");
+        }
+        else if(number%columns==1){
+            System.out.println("Mango");
+        }
+        else{
+            System.out.println("sapota");
+        }
+        
+      
+    }
+}
+
