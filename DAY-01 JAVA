@@ -1,0 +1,30 @@
+//Q.1 ARMSTRONG NUMBER
+public class ArmstrongArray {
+    public static void main(String[] args) {
+        int num = 9474;  // You can change this to any number
+        int temp = num;
+        int digits[] = new int[10];
+        int count = 0;
+        int sum = 0;
+
+        
+        while (temp > 0) {
+            digits[count] = temp % 10;
+            temp /= 10;
+            count++;
+        }
+
+        
+        for (int i = 0; i < count; i++) {
+            sum += Math.pow(digits[i], count);
+        }
+
+        if (sum == num) {
+            System.out.println(num + " is an Armstrong number.");
+        } else {
+            System.out.println(num + " is not an Armstrong number.");
+        }
+    }
+}
+
+
