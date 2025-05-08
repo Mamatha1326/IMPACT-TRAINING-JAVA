@@ -1,0 +1,19 @@
+import java.util.*;
+class Code {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter a number:");
+        long num=s.nextInt();
+        System.out.println("enter a m value:");
+        int m = s.nextInt();
+        int count=0;
+        while(num>0){
+           long i=num%10;
+           num=num/10;
+           if(i==m){
+               count++;
+           }
+        }
+        System.out.println(count);
+    }
+}
