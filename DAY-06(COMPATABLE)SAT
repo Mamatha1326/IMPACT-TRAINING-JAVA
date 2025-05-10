@@ -1,0 +1,38 @@
+import java.util.*;
+class SameArray {
+    public static void main(String[] args) {
+        int count=0;
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Enter first Array1 size: ");
+        int n = s.nextInt();
+        int arr1[] = new int[n];
+        int arr2[] = new int[n];
+        System.out.println("Enter second Array2 Values: ");
+        
+        
+        for(int i =0; i < n; i++) {
+            arr1[i] = s.nextInt();
+           
+        }
+        
+        System.out.println("Enter first Array2 Values: ");
+        for(int i =0; i < n; i++) {
+            arr2[i] = s.nextInt();
+        }
+        
+        for(int i=0;i<n;i++){
+            if (arr1[i] >= arr2[i]) {
+                count++;
+        }
+        }
+        if(count==n){
+            System.out.println("compatable");
+        }
+        else{
+            System.out.println("Not Compatable");
+        }
+        
+
+    }
+}
