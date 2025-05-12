@@ -1,0 +1,72 @@
+public class MamathaPattern {
+    public static void main(String[] args) {
+        for (int i = 0; i < 7; i++) {
+            // M
+            for (int j = 0; j < 7; j++) {
+                if (j == 0 || j == 6 || (i == j && j <= 3) || (i + j == 6 && j >= 3))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+
+            // A
+            for (int j = 0; j < 7; j++) {
+                if ((j == 0 || j == 6) && i != 0 || i == 0 && j > 0 && j < 6 || i == 3)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+
+            // M
+            for (int j = 0; j < 7; j++) {
+                if (j == 0 || j == 6 || (i == j && j <= 3) || (i + j == 6 && j >= 3))
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+
+            // A
+            for (int j = 0; j < 7; j++) {
+                if ((j == 0 || j == 6) && i != 0 || i == 0 && j > 0 && j < 6 || i == 3)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+
+            // T
+            for (int j = 0; j < 7; j++) {
+                if (i == 0 || j == 3)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+
+            // H
+            for (int j = 0; j < 7; j++) {
+                if (j == 0 || j == 6 || i == 3)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.print("  ");
+
+            // A
+            for (int j = 0; j < 7; j++) {
+                if ((j == 0 || j == 6) && i != 0 || i == 0 && j > 0 && j < 6 || i == 3)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+
+            System.out.println(); // Move to next line
+        }
+    }
+}
+
+
+
