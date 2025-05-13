@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of groups: ");
+        int n = scanner.nextInt();
+        System.out.print("Enter the capacity of one bus: ");
+        int m = scanner.nextInt();
+        int[] groups = new int[n];
+        System.out.println("Enter the size of each group:");
+        for (int i = 0; i < n; i++) {
+            groups[i] = scanner.nextInt();
+        }
+        int buses = 1; 
+        int currentLoad = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (currentLoad + groups[i] <= m) {
+                currentLoad += groups[i]; 
+            } else {
+                buses++;
+                currentLoad = groups[i]; 
+            }
+        }
+
+        System.out.println("Minimum number of buses needed: " + buses);
+
+        scanner.close();
+    }
+}
