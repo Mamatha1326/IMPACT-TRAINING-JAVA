@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        int[] arr = new int[2 * n];
+
+        for (int i = 0; i < 2 * n; i++) {
+            arr[i] =sc.nextInt();
+        }
+
+        int maxH = 0; 
+        int maxW =0;
+        int hIndex =0 ; 
+        int wIndex = 0;
+
+        for (int i = 0; i < 2 * n; i += 2) {
+            int height = arr[i];
+            int weight = arr[i + 1];
+
+            if (height > maxH) {
+                maxH = height;
+                hIndex = i / 2 + 1;
+            }
+
+            if (weight > maxW) {
+                maxW = weight;
+                wIndex = i / 2 + 1;
+            }
+        }
+
+        System.out.println(hIndex + " " + wIndex);
+    }
+}
