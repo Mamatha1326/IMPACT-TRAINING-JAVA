@@ -1,0 +1,27 @@
+import java.util.*;
+class parent{
+    void displayparent(){
+        System.out.println("Parent class");
+    }
+}
+class child1 extends parent{
+    void displaychild1()
+    {
+        System.out.println("1st Child class");
+    }
+}
+class child2 extends parent{
+    void displaychild2()
+    {
+        System.out.println("2nd child class");
+    }
+}
+class Main{
+    public static void main(String [] args){
+        child1 obj=new child1();
+        obj.displayparent();
+        obj.displaychild1();
+        child2 obj2=new child2();
+        obj2.displaychild2();
+    }
+}
