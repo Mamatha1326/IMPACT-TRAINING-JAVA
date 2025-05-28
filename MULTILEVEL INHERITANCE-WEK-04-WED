@@ -1,0 +1,27 @@
+//MULTI LEVEL INHERITANCE
+import java.util.*;
+class parent{
+    void displayparent(){
+        System.out.println("Parent class");
+    }
+}
+class child extends parent{
+    void displaychild()
+    {
+        System.out.println("Child class");
+    }
+}
+class grandson extends child{
+    void displaygrandson()
+    {
+        System.out.println("Grand class");
+    }
+}
+class Main{
+    public static void main(String [] args){
+        grandson obj=new grandson();
+        obj.displayparent();
+        obj.displaychild();
+        obj.displaygrandson();
+    }
+}
