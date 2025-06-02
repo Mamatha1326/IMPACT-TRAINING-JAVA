@@ -1,0 +1,47 @@
+// WRITE A JAVA PRG TO CREATE A BASE CLS Vehicle WITH A METHODs CALLED Start engine() and stop engine().
+// CREATE Two SUBCLASSEs. Car and motorcycle Override THE Start engine() and stop engine().methods 
+//in  EACH SUBCLS TO start and stop the engines.
+import java.util.*;
+class Vehicle{
+    public void Startengine()
+    {
+        System.out.println("Vehicle Started engine....");
+    }
+    public void Stopengine(){
+        System.out.println("Vehicle Stoped engine");
+    }
+
+}
+class Car extends Vehicle{
+     public void Startengine()
+    {
+        System.out.println("Car Started engine....");
+    }
+    public void Stopengine(){
+        System.out.println("Car Stoped engine");
+    }
+}
+class Motorcycle extends Vehicle{
+     public void Startengine()
+    {
+        System.out.println("Motorcycle Started engine....");
+    }
+    public void Stopengine(){
+        System.out.println("Motorcycle Stoped engine");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Vehicle vehicle=new Vehicle();
+        Car car=new Car();
+        Motorcycle motorcycle=new Motorcycle();
+       
+        vehicle.Startengine();
+        vehicle.Stopengine();
+        car.Startengine();
+        car.Stopengine();
+        motorcycle.Startengine();
+        motorcycle.Stopengine();
+        
+    }
+}
