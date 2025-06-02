@@ -1,0 +1,39 @@
+
+// WRITE A JAVA PRG TO CREATE A BASE CLS SPORTS WITH A METHOD CALLED PLAY().
+// CREATE THREEE SUBCLASSES :FOOTBALL,BASKETBALL,AND RUBBY. Override THE PLAY()
+// METHOD IN EACH SUBCLS TO PLAY A SPECIFIC STATEMENT FOR EACH SPORTS
+import java.util.*;
+class Sports{
+    public void play()
+    {
+        System.out.println("PLaying sports");
+    }
+}
+class FOOTBALL extends Sports{
+    public void play(){
+        System.out.println("Playing FOOTBALL");
+    }
+}
+class BASKETBALL extends Sports{
+    public void play(){
+        System.out.println("Playing BASKETBALL");
+    }
+}
+class RUGBY extends Sports{
+    public void play(){
+        System.out.println("Playing RUGBY");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Sports sports=new Sports();
+        FOOTBALL football=new FOOTBALL();
+        BASKETBALL basketball=new BASKETBALL();
+        RUGBY rugby=new RUGBY();
+        sports.play();
+        football.play();
+        basketball.play();
+        rugby.play();
+        
+    }
+}
