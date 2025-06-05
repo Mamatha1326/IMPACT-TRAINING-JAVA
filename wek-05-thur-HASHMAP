@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        HashMap<Integer,String>Mamatha=new HashMap<>();
+        Mamatha.put(1,"parul");
+        Mamatha.put(2,"university");
+        Mamatha.put(3,"piet");
+        System.out.println(Mamatha);
+        System.out.println(Mamatha.get(2));
+        System.out.println(Mamatha.size());
+        System.out.println(Mamatha.values());
+        System.out.println(Mamatha.containsKey(1));
+        for(int i:Mamatha.keySet()){
+            System.out.print(i+"--"+Mamatha.get(i));
+        }
+     
+        
+    }
+}
